@@ -61,7 +61,7 @@ To create an image, I created 2 masked image such as the one shown below to crea
 
 | Background shape mask | words plotting mask |
 |---------------------- | ------------------- |
-| <img src = "bday_site/custom_wordcloud/heart_bcg.png"> | <img src = "bday_site/custom_wordcloud/heart_mask.png"> |
+| <img src = "bday_site/custom_wordcloud/heart_bcg.png"> | <img src = "bday_site/custom_wordcloud/heart_mask_1.png"> |
 |  This is to create the outline for the word cloud | This is to plot each word of the sentence |
 
 The final graph with some sentence will look as following:
