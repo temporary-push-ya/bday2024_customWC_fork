@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/3977891868_2383837167_223132457.mp4'
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/2852726489_3890345977_3734647332.mp4'
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/2852726489_2099273576_3887829474.mp4'
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/2852726489_3890345977_2842459423.mp4'
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/2852726489_2585828945_4206986547.mp4'
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/2852726489_2972806593_3850341442.mp4'
+file 'file:C:/MINE/war on art/frustration/bday/Bday_2024/manim_greetings/media/videos/1080p60/partial_movie_files/Greetings/2852726489_1704852926_3632999845.mp4'

@@ -49,13 +49,17 @@
       </div>
       <br>
     {% if plot_html %}
-        {{plot_html|safe}}
+    <br>
+    {{plot_html|safe}}
     {% endif %}
     
-    <br>
     {% if image %}
+    <br>
+    <br>
     <img src="{% static 'images/wow.gif' %}" style="width: 30%; height: 20%">
     {% endif %}
+    <p>Love quote: {{match}}</p>
+    <p>Match for u ❤️: {{score}}</p>
 <br>
 <br>
 <div>

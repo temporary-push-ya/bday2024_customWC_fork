@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse
-from urllib.parse import urlencode
 import matplotlib.pyplot as plt 
 import mpld3
 from custom_wordcloud.custom_wc import wc_generator
+from custom_wordcloud.pinecone_query import PineconeQuery as PQ;
 
 def login_view(request):
     if request.method == 'POST':
@@ -29,17 +28,17 @@ def matches(request):
     if request.method == 'POST':
         mask = request.POST.get('radio')
         query = request.POST.get('text_input')
-        print(query, mask)
-
-        wordcloud = wc_generator(query, mask)
+        match, score = PQ(query).query()
+        wordcloud = wc_generator(match, mask)
+        score = round(score, 3)
 
         fig = wordcloud.generate()
 
         # Convert plot to HTML
         html = mpld3.fig_to_html(fig)
-        context = {'plot_html': html, 'img_path':False}
+        context = {'plot_html': html, 'img':False, 'match':match, 'score':score}
 
     else: # only at the start when nothing is types
-        context = {'plot_html': None, 'image':True}
+        context = {'plot_html': None, 'image':True, 'match':'Happy Birthday Thanku', 'score':1.0}
 
     return render(request, 'wordmatch/matches.html', context)

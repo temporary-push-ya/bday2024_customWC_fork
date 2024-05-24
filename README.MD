@@ -1,6 +1,12 @@
 # Inspiration
 
 The main inspiration for this project was to integrate the different applied data science and web development technologies I had learnt to make a creative gift for someone special to me. <3
+>Hint for login: nickname
+
+The site looks as following:
+<div style="text-align: center;">
+  <img src="readme_img/website_demo.gif" width="75%">
+</div>
 
 # What does the project do?
 The project takes a message from the user, finds the closest resembling quote based on that message and presents it in a word cloud format as shown in the following diagram:
@@ -8,6 +14,10 @@ The project takes a message from the user, finds the closest resembling quote ba
   <img src="readme_img/idea.png" width="75%">
 </div>
 <br>
+
+## Unexpected Error
+
+The original plan was to use a sentence embedder to encode and decode, however, most decoder libraries are either predicting using the lines or not embedding it properly. I will have to get the ID of the embedding and just find the similar ID in txt file. (ducttape solution for now!)
 
 # Skills learnt
 
@@ -32,6 +42,11 @@ This project includes the following skills I have learnt (these are in the same 
 <div style="text-align: center;">
   <img src="readme_img/pinecone.png" width="100%">
 </div>
+
+## Drawing human anatomy
+
+The masks are created manually and for most of them, I had to learn how to draw different facial features such as: eyes, lips and how to make the proportions correct. I have always loved doodling but have always been bad at any anatomical drawing.
+I will not be showing any images for it as I do not want to any accidental face reveal in the reference photos used.
 
 ## Creating custom wordcloud looking image
 Initially I wanted to create a Wordcloud, with some image mask, with the quote retrieved from the database but there were 2 issues with it:

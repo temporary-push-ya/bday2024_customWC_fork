@@ -20,11 +20,11 @@ class wc_generator():
                 self.bcg_path = os.path.join(settings.STATICFILES_DIRS[0], "images/heart_bcg.png")
          
         elif option == "star":
-            self.mask_path = "star_mask.png"
-            self.bcg_path = "star_bcg.png"
+            self.mask_path = os.path.join(settings.STATICFILES_DIRS[0], "images/star_mask.png")
+            self.bcg_path = os.path.join(settings.STATICFILES_DIRS[0], "images/star_bcg.png")
         elif option == "you":
-            self.mask_path = "you_mask.png"
-            self.bcg_path = "you_bcg.png"
+            self.mask_path = os.path.join(settings.STATICFILES_DIRS[0], "images/you_mask.png")
+            self.bcg_path = os.path.join(settings.STATICFILES_DIRS[0], "images/you_bcg.png")
         else:
             raise Exception("Invalid option")
 
@@ -64,7 +64,7 @@ class wc_generator():
         if len(words) > len(pts):
             words = words[:len(pts)]
 
-        sample_ind = set(np.random.randint(0, len(pts), len(words)))
+        sample_ind = set(np.random.choice(len(pts), size=len(words), replace=False))
 
         # array pts -> (x,y) pts
         plot_pts = sorted(pts, key=lambda x: x[1]**3-x[0], reverse=True)
@@ -79,7 +79,7 @@ class wc_generator():
 
         # while creating the django site 
         if settings.DEBUG:
-            print(f' there are totla: {len(pts)} black pts and {len(plot_pts)} points picked,\n words in sentence are {len(words)}')
+            print(f' there are total: {len(pts)} black pts and {len(sample_ind)} points picked,\n words in sentence are {len(words)}')
             print(f'highest plot point:{np.max(y_bcg)} ')
             print(f'highest pts point:{np.max(list(map(lambda x:x[1], pts)))}')
 
